@@ -10970,3 +10970,266 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+/* ===== Skills Section Enhancement ===== */
+.skill-title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #495057;
+    margin-right: 0.4rem;
+}
+
+.skill-title::after {
+    content: "—";
+    margin-left: 0.4rem;
+    color: #6c757d;
+}
+
+.skill-desc {
+    color: #495057;
+    font-weight: 400;
+}
+
+.fa-ul li {
+    margin-bottom: 1rem;
+}
+
+
+
+/* ===== Animated About Contact Section ===== */
+
+.about-contact {
+    max-width: 820px;
+    line-height: 1.4;
+}
+
+/* Each line on its own row */
+.contact-line {
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+/* Links styling */
+.about-contact a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.35s ease;
+}
+
+/* Hover highlight effect */
+.about-contact a:hover {
+    color: #0d6efd;
+    transform: scale(1.08);
+}
+
+/* ===== Slide + Wave Animation ===== */
+
+.animated-contact {
+    animation: slideWave 5s ease-out forwards;
+}
+
+@keyframes slideWave {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Smooth stop after animation */
+.animated-contact:hover {
+    animation-play-state: paused;
+}
+
+/* Cursor hover = subtle glow */
+.about-contact a:hover {
+    text-shadow: 0 4px 15px rgba(13, 110, 253, 0.45);
+}
+
+.email-line a {
+    color: #dc3545; /* professional red */
+}
+
+.email-line a:hover {
+    color: #ff4d4d;
+}
+
+
+
+
+# TITLE 
+
+.resume-section-content h2.typing-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    min-height: 32px;
+}
+/*  */
+#typing-text {
+    background: linear-gradient(90deg, #007bff, #28a745, #ff9800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cursor {
+    font-weight: bold;
+    font-size: 2.1rem;
+    margin-left: 4px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+
+/* TRAVEL */
+.interest-video {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+
+.interest-card {
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* NEW PAGE TRAVEL */
+.blog-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.glass-card img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+
+/* INTEREST PAGE BUTTON */
+/* ===============================
+   INTEREST CARD HOVER EFFECT
+================================ */
+
+/* Base state */
+.interest-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    will-change: transform;
+}
+
+/* Card zoom on hover */
+.interest-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   BUTTON HOVER EFFECT
+================================ */
+
+/* Default button state */
+.interest-card .btn {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+    transition: 
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Button hover (only when cursor is on button) */
+.interest-card .btn:hover {
+    background-color: #6610f2; /* slightly vibrant purple-blue */
+    border-color: #6610f2;
+    box-shadow: 0 8px 18px rgba(102, 16, 242, 0.4);
+    transform: translateY(-2px);
+}
+/* Button reacts when card is hovered */
+.interest-card:hover .btn {
+    background-color: #5a0fc8;
+    border-color: #5a0fc8;
+}
+
+
+
+/* ===== FEEDBACK CAROUSEL ===== */
+/* ===== FEEDBACK CAROUSEL IMAGE ===== */
+.feedback-carousel-img {
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 18px;
+    background-color: #ffffff;
+    padding: 12px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* Make arrows clearly visible */
+.counter {
+    transition: all 0.3s ease;
+}
+
+#domainRotate {
+    transition: opacity 0.4s ease;
+}
+
+
+
+
+/* Premium background rhythm IMP */
+#about
+ {
+      background-color: #FFFFFF;
+ }
+#experience
+  {
+      background-color: #D1FAE5;
+  }
+#education 
+  {
+      background-color: #FFF9E6;
+  } 
+#skills 
+  {
+      background-color: #FFFFFF;
+  }
+#interests
+  {
+      background-color: #D1FAE5;
+  }  
+#awards 
+  {
+      background-color: #FFF9E6;
+  }
+
+
