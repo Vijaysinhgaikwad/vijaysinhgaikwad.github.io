@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Blogs | Vijaysinh Gaikwad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap / Main Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= IMPORTANT OVERRIDE ================= */
+        /* Remove sidebar padding from Resume theme */
+        body {
+            padding-left: 0 !important;
+            margin: 0;
+        }
+
+        /* ================= GENERAL ================= */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* ================= HERO SECTION ================= */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                rgba(0,0,0,0.45),
+                rgba(0,0,0,0.6)
+            );
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00c6ff, #ff6ec4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            max-width: 720px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* ================= BLOG SECTION ================= */
+        .blogs-section {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            padding: 80px 0;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .glass-card img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        .platform-badge {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.25);
+            display: inline-block;
+        }
+
+        /* ================= MOBILE OPTIMIZATION ================= */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 65vh;
+            }
+
+            .hero-video {
+                object-fit: contain;
+                background-color: #000;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HERO VIDEO -->
+<section class="hero-section">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/video/travel-hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <div>
+            <h1>Travel Blogs & Stories</h1>
+            <p>
+                A visual and narrative journey through my solo travels across India,
+                published on Medium, Tripoto, and TravelTriangle.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- BLOG CARDS -->
+<section class="blogs-section">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <img src="assets/img/travel1.jpg" alt="Travel Blog">
+                    <div class="p-4">
+                        <span class="platform-badge">Medium</span>
+                        <h5 class="mt-2">Exploring the Ghats of Maharashtra</h5>
+                        <p class="small">
+                            Scenic mountain roads, misty valleys, and offbeat villages.
+                        </p>
+                        <a href="https://medium.com/@gaikwad.vijaysingh" class="btn btn-outline-light btn-sm">
+                            Read Story →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <img src="assets/img/travel2.jpg" alt="Travel Blog">
+                    <div class="p-4">
+                        <span class="platform-badge">Tripoto</span>
+                        <h5 class="mt-2">Backpacking Across Rajasthan</h5>
+                        <p class="small">
+                            Heritage cities, desert trails, and cultural depth.
+                        </p>
+                        <a href="https://www.tripoto.com/profile/vijaysinhgaikwad" class="btn btn-outline-light btn-sm">
+                            Read Story →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <img src="assets/img/travel3.jpg" alt="Travel Blog">
+                    <div class="p-4">
+                        <span class="platform-badge">TravelTriangle</span>
+                        <h5 class="mt-2">Hidden Gems of South India</h5>
+                        <p class="small">
+                            Slow travel through unexplored southern landscapes.
+                        </p>
+                        <a href="TRAVELTRIANGLE_LINK" target="_blank" class="btn btn-outline-light btn-sm">
+                            Read Story →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html#interests" class="btn btn-light btn-sm">
+                ← Back to Portfolio
+            </a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
