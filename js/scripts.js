@@ -47,7 +47,8 @@ window.addEventListener('DOMContentLoaded', event => {
         const textArray = [
             "Data Analyst",
             "Data Scientist",
-            "PhD Scholar"
+            "PhD Scholar",
+            "AI Engineer"
         ];
 
         let textIndex = 0;
