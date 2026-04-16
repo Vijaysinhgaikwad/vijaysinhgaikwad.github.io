@@ -37,17 +37,26 @@
             object-fit: cover;
         }
 
+
+        .accent {
+            color: #fbbf24; /* premium gold */
+        }
+
+
+
+
+
         /* Soft gradient overlay (NOT black) */
         .hero-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(
                 135deg,
-                rgba(13,110,253,0.45),
-                rgba(111,66,193,0.45)
+                rgba(75, 76, 82, 0.3),
+                rgba(147, 150, 158, 0.3)
             );
         }
-
+        
         .hero-content {
             position: absolute;
             inset: 0;
@@ -61,11 +70,11 @@
 
         /* Gradient title */
         .hero-content h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            background: linear-gradient(90deg, #ffffff, #e0e7ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
 
         .hero-content p {
@@ -139,7 +148,10 @@
 
     <div class="hero-content">
         <div>
-            <h1>Publications & Technical Writing</h1>
+            <h1>
+                Publications &amp;<br>
+                <span class="accent">Technical Writing</span>
+            </h1>
             <p>
                 A curated collection of my research papers, technical articles, and analytical
                 writings in data science, machine learning, and applied analytics.
@@ -162,7 +174,7 @@
                         Machine learning–based analysis and prediction of accident severity
                         using structured road safety and transport datasets.
                     </p>
-                    <a href="https://www.researchgate.net/profile/Vijaysinh-Gaikwad?ev=prf_overview" class="btn btn-primary btn-sm">
+                    <a href="https://www.researchgate.net/profile/Vijaysinh-Gaikwad?ev=hdr_xprf" class="btn btn-primary btn-sm">
                         View Paper →
                     </a>
                 </div>
