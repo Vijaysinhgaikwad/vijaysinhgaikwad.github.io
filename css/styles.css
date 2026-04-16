@@ -10899,8 +10899,8 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
+    max-width: 13rem;
+    max-height: 13rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
@@ -11075,7 +11075,7 @@ section.resume-section .resume-section-content {
 }
 /*  */
 #typing-text {
-    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    background: linear-gradient(90deg, #020617, #1e3a8a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
@@ -11215,10 +11215,12 @@ section.resume-section .resume-section-content {
  {
       background-color: #FFFFFF;
  }
+
 #experience
   {
       background-color: #D1FAE5;
   }
+
 #education 
   {
       background-color: #FFF9E6;
@@ -11248,4 +11250,228 @@ section.resume-section .resume-section-content {
 .project-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 24px 50px rgba(0,0,0,0.12);
+}
+
+
+
+
+
+
+
+
+
+
+/* EXPERIENCE CARD NEW ADDED FOR EXPERINCE PAGE*/ 
+.exp-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+
+    background: #ffffff; /* WHITE CARD */
+    color: #111; /* dark text */
+
+    border: 2px solid transparent;
+
+    /* MULTICOLOR BORDER */
+    background-image: 
+        linear-gradient(#ffffff, #ffffff),
+        linear-gradient(120deg, #000000, #3b82f6, #9333ea, #000000);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.exp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* LEFT SIDE */
+.exp-left {
+    flex: 1;
+}
+
+.exp-left h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.exp-left .subheading {
+    color: #2563eb;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.exp-left p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* RIGHT SIDE */
+.exp-right {
+    min-width: 180px;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .exp-card {
+        flex-direction: column;
+    }
+
+    .exp-right {
+        text-align: left;
+    }
+}
+
+
+
+
+/* EXPERIENCE CARD - SAFE FIX EXPERIENCE NEWLY ADDED*/   
+.exp-card {
+    background-color: #D1FAE5; /* white card */
+
+    border: 1.7px solid #000000;
+
+    border-radius: 10px;
+
+    padding: 20px;
+    margin-bottom: 30px; /* FIX OVERLAP */
+
+    transition: all 0.60s ease;
+}
+
+/* HOVER EFFECT */
+.exp-card:hover {
+    transform: translateY(-10px) scale(1.02);  /* more noticeable lift */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);  /* stronger shadow */
+    border-color: #3b82f6; /* slight blue highlight */
+}
+
+/* IMPORTANT: KEEP ORIGINAL TEXT SIZE */
+.exp-card * {
+    font-size: inherit !important;
+}
+.exp-card h3 {
+    font-size: 1.8rem !important;  /* increase as you like */
+    font-weight: 700;
+}
+.exp-card .subheading {
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    color: #6b7280;  /* slight highlight */
+}
+.exp-card {
+    transition: all 0.60s ease;
+}
+
+
+
+
+.img-profile {
+    width: 250px !important;   /* increase size */
+    height: 250px !important;
+    object-fit: cover;
+}
+
+
+
+
+/* NAV LINKS BASE */
+#sideNav .nav-link {
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* HOVER EFFECT */
+#sideNav .nav-link:hover {
+    color: #ffffff;
+    transform: translateX(5px);  /* slight move */
+}
+
+/* ACTIVE LINK (CURRENT SECTION) */
+#sideNav .nav-link.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* LEFT INDICATOR LINE (PREMIUM LOOK) */
+#sideNav .nav-link::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 60%;
+    background: linear-gradient(to bottom, #3b82f6, #9333ea);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* SHOW LINE ON HOVER / ACTIVE */
+#sideNav .nav-link:hover::before,
+#sideNav .nav-link.active::before {
+    width: 4px;
+}
+
+#sideNav .nav-link:hover {
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+}
+
+
+
+
+/* AWARDS LIST */
+.awards-list {
+    padding-left: 1.5rem;
+}
+
+/* EACH ITEM */
+.award-item {
+    position: relative;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* LEFT ACCENT LINE */
+.award-item::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #f59e0b, #fbbf24);
+    border-radius: 4px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.award-item:hover {
+    background: rgba(0,0,0,0.03);
+    transform: translateX(5px);
+}
+
+/* SHOW LINE ON HOVER */
+.award-item:hover::before {
+    opacity: 1;
+}
+
+/* ICON STYLE */
+.award-item i {
+    font-size: 1rem;
 }
