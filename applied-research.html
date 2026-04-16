@@ -56,13 +56,10 @@
             text-align: center;
             padding: 20px;
         }
-
         .hero-content h1 {
             font-size: 3rem;
-            font-weight: 700;
-            background: linear-gradient(90deg, #ffffff, #e0e7ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            color: #ffffff; /* normal white text */
         }
 
         .hero-content p {
@@ -70,6 +67,10 @@
             margin: 18px auto 0;
             font-size: 1.15rem;
             color: #f1f5f9;
+        }
+
+        .accent {
+        color: #fbbf24; /* premium gold/amber */
         }
 
         /* ===== SECTIONS ===== */
@@ -150,7 +151,10 @@
 
     <div class="hero-content">
         <div>
-            <h1>Applied Research & Innovation</h1>
+            <h1>
+            Applied Research &amp;<br>
+            <span class="accent">Innovation</span>
+            </h1>
             <p>
                 Bridging data, research, and real-world problem solving through experimentation,
                 analytical rigor, and practical implementation across domains.
