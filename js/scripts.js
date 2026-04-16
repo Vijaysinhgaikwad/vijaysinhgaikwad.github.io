@@ -1,11 +1,6 @@
 /*!
-* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
+* Start Bootstrap - Resume v7.0.6
 */
-//
-// Scripts
-//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -37,13 +32,11 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     /* ===============================
-       TYPING ANIMATION (ABOUT SECTION)
+       TYPING ANIMATION
     ================================ */
     const typingText = document.getElementById('typing-text');
 
-    // Safety check: run only if element exists
     if (typingText) {
-
         const textArray = [
             "Data Analyst",
             "Data Scientist",
@@ -79,8 +72,83 @@ window.addEventListener('DOMContentLoaded', event => {
             setTimeout(typeEffect, speed);
         }
 
-        // Start typing animation
         typeEffect();
     }
 
+    /* ===============================
+       EXPERIENCE CARD ANIMATION
+    ================================ */
+    const expCards = document.querySelectorAll('.exp-card');
+
+    if (expCards.length > 0) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        expCards.forEach(card => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(40px)";
+            card.style.transition = "all 0.6s ease";
+            observer.observe(card);
+        });
+    }
+
+});
+
+
+    /* ===============================
+         LANGUAGE SELECTION
+    ================================ */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btn = document.getElementById("langBtn");
+    const menu = document.getElementById("langMenu");
+    const items = menu.querySelectorAll("div[data-lang]");
+
+    // Populate labels
+    items.forEach(item => {
+        item.textContent = item.getAttribute("data-label");
+    });
+
+    // Toggle menu open/close
+    btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function () {
+        menu.style.display = "none";
+    });
+
+    // Language click handler
+    items.forEach(item => {
+        item.addEventListener("click", function () {
+            const lang = this.getAttribute("data-lang");
+            const currentUrl = window.location.href
+                .replace(/[?&]hl=[^&]*/g, "")   // strip old hl param
+                .replace(/[?&]_x_tr_sl=[^&]*/g, "")
+                .replace(/[?&]_x_tr_tl=[^&]*/g, "")
+                .replace(/[?&]_x_tr_hl=[^&]*/g, "")
+                .replace(/\?$/, "");             // clean trailing ?
+
+            if (lang === "") {
+                // Restore original — just reload clean URL
+                window.location.href = currentUrl;
+            } else {
+                // Use Google Translate redirect (no widget, no banner)
+                const encoded = encodeURIComponent(currentUrl);
+                window.location.href = 
+                    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encoded}`;
+            }
+
+            menu.style.display = "none";
+        });
+    });
 });
