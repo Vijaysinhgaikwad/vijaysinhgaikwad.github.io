@@ -160,6 +160,11 @@
     </div>
 </section>
 
+
+
+
+
+<!-- ================= PUBLICATIONS ================= -->
 <!-- ================= PUBLICATIONS ================= -->
 <section class="pub-section">
     <div class="container">
@@ -169,14 +174,15 @@
             <div class="col-md-6">
                 <div class="pub-card">
                     <span class="badge bg-primary badge-platform">Research Paper</span>
-                    <h5>Predictive Modeling of Road Accident Severity</h5>
+                    <h5>Data-Driven Modeling and Predictive Analytics</h5>
                     <p class="text-muted">
-                        Machine learning–based analysis and prediction of accident severity
-                        using structured road safety and transport datasets.
+                        A collection of research work focused on leveraging machine learning and
+                        artificial intelligence to analyze complex datasets, uncover patterns, and
+                        develop predictive models for real-world problem-solving across domains.
                     </p>
-                    <a href="https://www.researchgate.net/profile/Vijaysinh-Gaikwad?ev=hdr_xprf" class="btn btn-primary btn-sm">
-                        View Paper →
-                    </a>
+                    <button class="btn btn-primary btn-sm" onclick="openModal('paperModal')">
+                        View Papers →
+                    </button>
                 </div>
             </div>
 
@@ -184,14 +190,15 @@
             <div class="col-md-6">
                 <div class="pub-card">
                     <span class="badge bg-dark badge-platform">Technical Article</span>
-                    <h5>End-to-End Machine Learning Pipeline</h5>
+                    <h5>End-to-End AI/ML Systems and Practical Implementations</h5>
                     <p class="text-muted">
-                        A practical walkthrough covering data preprocessing, model building,
-                        evaluation, and deployment strategies.
+                        A series of technical articles exploring the design, development, and
+                        deployment of scalable machine learning systems, with a focus on practical
+                        workflows, optimization strategies, and real-world applications.
                     </p>
-                    <a href="ARTICLE_LINK" class="btn btn-primary btn-sm">
-                        Read Article →
-                    </a>
+                    <button class="btn btn-primary btn-sm" onclick="openModal('articleModal')">
+                        Read Articles →
+                    </button>
                 </div>
             </div>
 
@@ -204,6 +211,327 @@
         </div>
     </div>
 </section>
+
+
+<!-- ================= RESEARCH PAPERS MODAL ================= -->
+<div class="custom-modal-overlay" id="paperModal" onclick="closeModalOutside(event, 'paperModal')">
+    <div class="custom-modal">
+        <div class="custom-modal-header">
+            <h5><i class="fas fa-flask me-2"></i>Research Papers</h5>
+            <button class="modal-close-btn" onclick="closeModal('paperModal')">✕</button>
+        </div>
+        <div class="custom-modal-body">
+
+            <div class="pub-list-item">
+                <div class="pub-number">01</div>
+                <div class="pub-info">
+                    <div class="pub-title">Benchmarking OCR Pipelines with Adaptive Enhancement for Multi-Domain Retail Bill Digitization.</div>
+                    <div class="pub-meta">arXiv · 2026</div>
+                    <a href="https://arxiv.org/abs/2604.25176" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Paper
+                    </a>
+                </div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-number">02</div>
+                <div class="pub-info">
+                    <div class="pub-title">Accident Severity Prediction Using Machine Learning (Coming Soon)</div>
+                    <div class="pub-meta">ResearchGate · 2026</div>
+                    <a href="YOUR_PAPER_2_LINK" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Paper
+                    </a>
+                </div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-number">03</div>
+                <div class="pub-info">
+                    <div class="pub-title">Deep Learning for Road Safety Pattern Analysis (Coming Soon)</div>
+                    <div class="pub-meta">ResearchGate · 2026</div>
+                    <a href="YOUR_PAPER_3_LINK" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Paper
+                    </a>
+                </div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-number">04</div>
+                <div class="pub-info">
+                    <div class="pub-title">NLP-Based Insights from Crash Investigation Reports (Coming Soon)</div>
+                    <div class="pub-meta">ResearchGate · 2026</div>
+                    <a href="YOUR_PAPER_4_LINK" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Paper
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= ARTICLES MODAL ================= -->
+<div class="custom-modal-overlay" id="articleModal" onclick="closeModalOutside(event, 'articleModal')">
+    <div class="custom-modal">
+        <div class="custom-modal-header">
+            <h5><i class="fas fa-pen-nib me-2"></i>Technical Articles</h5>
+            <button class="modal-close-btn" onclick="closeModal('articleModal')">✕</button>
+        </div>
+        <div class="custom-modal-body">
+
+            <div class="pub-list-item">
+                <div class="pub-number">01</div>
+                <div class="pub-info">
+                    <div class="pub-title">How I Built a Smart OCR Pipeline That Reads Real-World Retail Bills, and Benchmarked It Against the Best.</div>
+                    <div class="pub-meta">Medium · 2026</div>
+                    <a href="https://medium.com/@gaikwad.vijaysingh/how-i-built-a-smart-ocr-pipeline-that-reads-real-world-retail-bills-and-benchmarked-it-against-the-18f33bea045d" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> Read Article
+                    </a>
+                </div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-number">02</div>
+                <div class="pub-info">
+                    <div class="pub-title">Understanding CNNs for Image Classification (Coming Soon)</div>
+                    <div class="pub-meta">Medium · 2026</div>
+                    <a href="YOUR_ARTICLE_2_LINK" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> Read Article
+                    </a>
+                </div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-number">03</div>
+                <div class="pub-info">
+                    <div class="pub-title">Practical Guide to Exploratory Data Analysis (Coming Soon)</div>
+                    <div class="pub-meta">LinkedIn Article · 2026</div>
+                    <a href="YOUR_ARTICLE_3_LINK" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> Read Article
+                    </a>
+                </div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-number">04</div>
+                <div class="pub-info">
+                    <div class="pub-title">Automating Data Workflows with Python & Pandas (Coming Soon)</div>
+                    <div class="pub-meta">LinkedIn Article · 2026</div>
+                    <a href="YOUR_ARTICLE_4_LINK" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> Read Article
+                    </a>
+                </div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-number">05</div>
+                <div class="pub-info">
+                    <div class="pub-title">NLP Fundamentals for Text Classification (Coming Soon)</div>
+                    <div class="pub-meta">Medium · 2026</div>
+                    <a href="YOUR_ARTICLE_5_LINK" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> Read Article
+                    </a>
+                </div>
+            </div>
+
+            <div class="pub-list-item">
+                <div class="pub-number">06</div>
+                <div class="pub-info">
+                    <div class="pub-title">Road Safety Analytics: Data to Decisions (Coming Soon)</div>
+                    <div class="pub-meta">ResearchGate · 2026</div>
+                    <a href="YOUR_ARTICLE_6_LINK" target="_blank" class="pub-link-btn">
+                        <i class="fas fa-external-link-alt"></i> Read Article
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= MODAL STYLES ================= -->
+<style>
+    .custom-modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 99999;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        backdrop-filter: blur(4px);
+    }
+
+    .custom-modal-overlay.active {
+        display: flex;
+    }
+
+    .custom-modal {
+        background: #ffffff;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 580px;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+        animation: modalSlideIn 0.3s ease;
+    }
+
+    @keyframes modalSlideIn {
+        from { transform: translateY(30px); opacity: 0; }
+        to   { transform: translateY(0);   opacity: 1; }
+    }
+
+    .custom-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 24px;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .custom-modal-header h5 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #1e293b;
+    }
+
+    .modal-close-btn {
+        background: #f1f5f9;
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        color: #64748b;
+        transition: background 0.2s;
+    }
+
+    .modal-close-btn:hover {
+        background: #e2e8f0;
+        color: #1e293b;
+    }
+
+    .custom-modal-body {
+        padding: 16px 24px;
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    .pub-list-item {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        padding: 16px 0;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    .pub-list-item:last-child {
+        border-bottom: none;
+    }
+
+    .pub-number {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #0d6efd;
+        min-width: 32px;
+        line-height: 1;
+        padding-top: 3px;
+    }
+
+    .pub-info {
+        flex: 1;
+    }
+
+    .pub-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 4px;
+        line-height: 1.4;
+    }
+
+    .pub-meta {
+        font-size: 0.8rem;
+        color: #94a3b8;
+        margin-bottom: 10px;
+    }
+
+    .pub-link-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #0d6efd;
+        text-decoration: none;
+        border: 1.5px solid #0d6efd;
+        padding: 4px 12px;
+        border-radius: 20px;
+        transition: all 0.2s ease;
+    }
+
+    .pub-link-btn:hover {
+        background: #0d6efd;
+        color: #ffffff;
+    }
+
+    @media (max-width: 576px) {
+        .custom-modal {
+            max-height: 85vh;
+        }
+        .pub-number {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+
+<!-- ================= MODAL SCRIPT ================= -->
+<script>
+    function openModal(id) {
+        document.getElementById(id).classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function closeModalOutside(event, id) {
+        if (event.target.id === id) {
+            closeModal(id);
+        }
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.custom-modal-overlay.active').forEach(modal => {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
