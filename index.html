@@ -44,6 +44,10 @@
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
+                    <!-- Profile photo visible only on mobile -->
+                    <div class="d-block d-lg-none text-center mb-4">
+                        <img class="img-fluid img-profile rounded-circle mx-auto" src="assets/img/profile.jpg" alt="Vijaysinh Gaikwad" style="width: 150px; height: 150px; object-fit: cover; border: 4px solid #0d6efd; box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);" />                    
+                    </div>
                     <h1 class="mb-0">
                         Vijaysinh
                         <span class="text-primary">Gaikwad</span>
@@ -54,7 +58,8 @@
                         <span id="typing-text"></span><span class="cursor">|</span>
                     </h2>
 
-                    
+                    <!-- 👇 ADD TYPING TITLE HERE -->
+                    <!-- 👇 ADD TYPING TITLE HERE -->
 
                    <div class="subheading mb-5 about-contact animated-contact">
                         <span class="contact-line">
@@ -73,12 +78,14 @@
                             <a href="mailto:Gaikwad.vijaysinh@outlook.com">Gaikwad.vijaysinh@outlook.com</a>
                         </span>
                     </div>
-
+                    
+                    <!-- 👇 ADD TYPING TITLE HERE -->
+                    <!-- 👇 ADD TYPING TITLE HERE -->
 
 
 
                     <ul class="lead mb-5">
-                        <li>Data Science & Analytics professional with 3.5+ years of industry experience delivering AI, Machine Learning, and Deep Learning solutions for real-world applications</li>
+                        <li>Data Science & Analytics professional with 3.6+ years of industry experience delivering AI, Machine Learning, and Deep Learning solutions for real-world applications</li>
                         <li>Currently pursuing a PhD in Information Technology & Business Analytics and hold a Master of Computer Applications (MCA) with specialization in Artificial Intelligence & Machine Learning</li>
                         <li>Experienced in end-to-end AI solution development, including data collection, preprocessing, model building, evaluation, and deployment. Strong in problem-solving, research, and designing scalable, data-driven solutions for complex business challenges.</li>
                         <li>Highly skilled in Python, R, and SAS, with a focus on automation, efficiency, and actionable insights. Also have experience in corporate training, mentoring teams, and collaborating across functions to deliver impactful solutions.</li>
@@ -112,7 +119,7 @@
                             </p>
                         </div>
                         <div class="flex-shrink-0">
-                            <span class="text-primary">Mar 2024 – Present (2 yr)</span>
+                            <span class="text-primary">Mar 2024 – Present (2 yr 3 mos)</span>
                         </div>
                     </div>
 
@@ -472,7 +479,135 @@
         </div>
          <!-- Language google -->
 
-        <!-- Language google -->
+
+
+        <!-- mobile toggle -->
+        <!-- Mobile Side Navigation -->
+        <style>
+            .mobile-side-nav {
+                display: none;
+            }
+
+            @media (max-width: 991px) {
+                .mobile-side-nav {
+                    display: flex;
+                    flex-direction: column;
+                    position: fixed;
+                    right: 12px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 9999;
+                    gap: 10px;
+                }
+
+                .mobile-side-nav a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 8px;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                .mobile-side-nav a .nav-label {
+                    background: rgba(0, 0, 0, 0.55);
+                    color: #fff;
+                    font-size: 10px;
+                    padding: 3px 7px;
+                    border-radius: 4px;
+                    opacity: 0;
+                    transform: translateX(10px);
+                    transition: all 0.3s ease;
+                    white-space: nowrap;
+                }
+
+                .mobile-side-nav a:hover .nav-label,
+                .mobile-side-nav a.active .nav-label {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+                .mobile-side-nav a .nav-dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: rgba(100, 100, 100, 0.4);
+                    border: 2px solid rgba(255, 255, 255, 0.6);
+                    transition: all 0.3s ease;
+                    flex-shrink: 0;
+                }
+
+                .mobile-side-nav a.active .nav-dot {
+                    background: #0d6efd;
+                    border-color: #0d6efd;
+                    transform: scale(1.3);
+                }
+
+                .mobile-side-nav a:hover .nav-dot {
+                    background: #0d6efd;
+                    border-color: #0d6efd;
+                }
+            }
+        </style>
+
+        <nav class="mobile-side-nav" id="mobileSideNav">
+            <a href="#about">
+                <span class="nav-label">About</span>
+                <span class="nav-dot"></span>
+            </a>
+            <a href="#experience">
+                <span class="nav-label">Experience</span>
+                <span class="nav-dot"></span>
+            </a>
+            <a href="#education">
+                <span class="nav-label">Education</span>
+                <span class="nav-dot"></span>
+            </a>
+            <a href="#Skills">
+                <span class="nav-label">Skills</span>
+                <span class="nav-dot"></span>
+            </a>
+            <a href="#interests">
+                <span class="nav-label">Interests</span>
+                <span class="nav-dot"></span>
+            </a>
+            <a href="#awards">
+                <span class="nav-label">Awards</span>
+                <span class="nav-dot"></span>
+            </a>
+        </nav>
+
+        <script>
+            // Highlight active dot based on scroll position
+            const sections = ['about', 'experience', 'education', 'Skills', 'interests', 'awards'];
+            const mobileNavLinks = document.querySelectorAll('.mobile-side-nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(id => {
+                    const section = document.getElementById(id);
+                    if (section) {
+                        const sectionTop = section.offsetTop - 100;
+                        if (window.scrollY >= sectionTop) {
+                            current = id;
+                        }
+                    }
+                });
+
+                mobileNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
+
+
+
+
+
+        <!-- mobile toggle -->
 
 
 
