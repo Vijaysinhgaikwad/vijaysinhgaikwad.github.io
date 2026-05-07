@@ -10970,6 +10970,22 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+@media (max-width: 991px) {
+    #about .resume-section-content {
+        padding-top: 1rem !important;
+    }
+
+    #about .d-block.d-lg-none {
+        margin-top: -10px !important;
+        margin-bottom: 16px !important;
+    }
+}
+
+
+
+
+
 /* ===== Skills Section Enhancement ===== */
 .skill-title {
     display: inline-block;
@@ -11474,4 +11490,27 @@ section.resume-section .resume-section-content {
 /* ICON STYLE */
 .award-item i {
     font-size: 1rem;
+}
+
+
+.about-contact {
+    font-size: 19px;   /* try 13px or 12px if you want smaller */
+}
+
+
+
+@media (max-width: 991px) {
+    section#about {
+        padding-top: 1rem !important;
+    }
+
+    section#about .resume-section-content {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    section#about .d-block.d-lg-none {
+        margin-top: 0 !important;
+        margin-bottom: 12px !important;
+    }
 }
