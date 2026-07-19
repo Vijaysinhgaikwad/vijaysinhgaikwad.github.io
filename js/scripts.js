@@ -39,9 +39,10 @@ window.addEventListener('DOMContentLoaded', event => {
     if (typingText) {
         const textArray = [
             "Data Analyst",
+            "Gen AI Engineer",
             "Data Scientist",
             "PhD Scholar",
-            "AI Engineer"
+            "AI Researcher",
         ];
 
         let textIndex = 0;
@@ -101,9 +102,9 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-    /* ===============================
-         LANGUAGE SELECTION
-    ================================ */
+/* ===============================
+     LANGUAGE SELECTION
+================================ */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -127,28 +128,30 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.style.display = "none";
     });
 
-    // Language click handler
+    // Language click handler — cookie-based, works in place, no redirect
     items.forEach(item => {
         item.addEventListener("click", function () {
             const lang = this.getAttribute("data-lang");
-            const currentUrl = window.location.href
-                .replace(/[?&]hl=[^&]*/g, "")   // strip old hl param
-                .replace(/[?&]_x_tr_sl=[^&]*/g, "")
-                .replace(/[?&]_x_tr_tl=[^&]*/g, "")
-                .replace(/[?&]_x_tr_hl=[^&]*/g, "")
-                .replace(/\?$/, "");             // clean trailing ?
-
-            if (lang === "") {
-                // Restore original — just reload clean URL
-                window.location.href = currentUrl;
-            } else {
-                // Use Google Translate redirect (no widget, no banner)
-                const encoded = encodeURIComponent(currentUrl);
-                window.location.href = 
-                    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encoded}`;
-            }
-
+            setLanguage(lang);
             menu.style.display = "none";
         });
     });
+
+    function setLanguage(lang) {
+        const domain = window.location.hostname;
+
+        // Clear any existing translation cookie first
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+
+        if (lang === "") {
+            // Restore original English
+            location.reload();
+        } else {
+            // Set translation cookie, Google's widget reads this on load
+            document.cookie = "googtrans=/en/" + lang + "; path=/";
+            document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+            location.reload();
+        }
+    }
 });
